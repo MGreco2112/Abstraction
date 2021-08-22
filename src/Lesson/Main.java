@@ -8,6 +8,13 @@ public class Main {
         public String owner;
         public String chipCode;
 
+        public Cat(String name, String color, String owner, String chipCode) {
+            this.name = name;
+            this.color = color;
+            this.owner = owner;
+            this.chipCode = chipCode;
+        }
+
         public abstract void purr();
 
     }
@@ -15,10 +22,7 @@ public class Main {
     static class Tabby extends Cat {
 
         public Tabby(String name, String color, String owner, String chipCode) {
-            this.name = name;
-            this.color = color;
-            this.owner = owner;
-            this.chipCode = chipCode;
+            super(name, color, owner, chipCode);
         }
 
         public void purr() {
@@ -34,7 +38,6 @@ public class Main {
 	To be used as a template to be extended to other child classes.
 	Let's use the example of Cats, the animal not the musical, because the Internet adores Cats.
 	Let's build a class called Cat, with name, color, owner, and chipCode fields.
-	Abstract Classes can only use the Default Constructor, so we won't be adding one to this Class.
 	Now there is no animal that fits the generic title of Cat, there are many, many forms of cats. Cat will be a
 	    blueprint for all future cats to be instantiated, so we will make the class Abstract.
 	Watch as we try to instantiate it as one normally would any other Java Class...
