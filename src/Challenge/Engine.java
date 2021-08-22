@@ -1,9 +1,26 @@
 package Challenge;
 
 public abstract class Engine {
-    boolean isOn = false;
+    public String type;
+    public boolean isOn = false;
+    public boolean isGas = false;
+    public boolean isElectric = false;
 
-    public abstract void turnOn();
+    public void turnOn() {
+        if (!isOn) {
+            System.out.println("Engine is now on");
+            isOn = true;
+        } else {
+            System.out.println("Engine is already on");
+        }
+    }
 
-    public abstract void turnOff();
+    public void turnOff() {
+        if (isOn) {
+            System.out.println("Engine is now off");
+        } else {
+            isOn = false;
+            System.out.println("Engine is already off");
+        }
+    }
 }

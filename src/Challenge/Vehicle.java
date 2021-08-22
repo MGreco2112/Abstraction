@@ -12,7 +12,13 @@ public abstract class Vehicle {
     public boolean isWater = false;
     public List<Passenger> passengers = new ArrayList<>();
 
-    public abstract void toggleEngine();
+    public void toggleEngine() {
+        if (!engine.isOn) {
+            engine.turnOn();
+        } else {
+            engine.turnOff();
+        }
+    }
 
     public abstract void addPassenger(Passenger passenger);
 
