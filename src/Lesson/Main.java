@@ -3,10 +3,10 @@ package Lesson;
 public class Main {
 
     static abstract class Cat {
-        public String name;
-        public String color;
-        public String owner;
-        public String chipCode;
+        private final String name;
+        private final String color;
+        private final String owner;
+        private final String chipCode;
 
         public Cat(String name, String color, String owner, String chipCode) {
             this.name = name;
@@ -72,7 +72,7 @@ public class Main {
 
         Cat tabby1 = new Tabby("Alexis", "Tan", "Michelle", "A337_TYB");
         tabby1.purr();
-        System.out.println(tabby1.toString());
+        System.out.println(tabby1);
 
 
     }
