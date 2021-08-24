@@ -15,6 +15,10 @@ public class Main {
             this.chipCode = chipCode;
         }
 
+        public String toString() {
+            return name + " " + color + " " + owner + " " + chipCode;
+        }
+
         public abstract void purr();
 
     }
@@ -68,6 +72,7 @@ public class Main {
 
         Cat tabby1 = new Tabby("Alexis", "Tan", "Michelle", "A337_TYB");
         tabby1.purr();
+        System.out.println(tabby1.toString());
 
 
     }
